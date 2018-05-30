@@ -1,0 +1,1584 @@
+2018-03-22 13:50:33.291935: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-03-22 13:50:33.872135: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:5e:00.0
+totalMemory: 15.89GiB freeMemory: 342.25MiB
+2018-03-22 13:50:33.872172: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:5e:00.0, compute capability: 6.0)
+WARNING:tensorflow:From main.py:120: get_or_create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.get_or_create_global_step
+param_high_dim1d
+{'record': '1', 'ckp_dir': 'dat/param_high_dim1d', 'filepath_episode_info': 'dat/param_high_dim1d/eps.txt', 'filepath_record_item': 'dat/param_high_dim1d/itm.txt', 'filepath_record_step': 'dat/param_high_dim1d/stp.txt', 'filepath_record_metrics': 'dat/param_high_dim1d/met.txt', 'filepath_record_action': 'dat/param_high_dim1d/act.txt', 'filepath_record_state': 'dat/param_high_dim1d/stt.txt', 'filepath_tmp_result': 'dat/param_high_dim1d/res.txt', 'filepath_env_saved': 'dat/param_high_dim1d/env.txt', 'filepath_im_model': 'dat/param_high_dim1d/model.ckpt', 'filepath_im_param': 'dat/param_high_dim1d/model.param', 'filepath_im_model2': 'dat/param_high_dim1d/model2.ckpt', 'Max_mu_q': '1e6', 'Min_mu_q': '1e4', 'Max_mu_t': '180', 'Min_mu_t': '30', 'Max_sigma2_q': '1e6', 'Min_sigma2_q': '1e4', 'Max_sigma2_t': '2500', 'Min_sigma2_t': '900', 'Max_q0': '1e4', 'Min_q0': '1e3', 'Max_ctr_scale': '0.12', 'Min_ctr_scale': '0.08', 'all_ctr_scale': '2e4', 'ntscale': '60', 'n_item_birthrate': '0.17', 'Max_item_birthrate': '0.0075', 'Min_item_birthrate': '0.005', 'n_item_birth_n': '500', 'n_item_deathrate': '0.17', 'n_item_death_coef': '3.0', 'n_item_init': '10000', 'n_episode': '180', 'ctr_epsilon': '0.00001', 'Q_all_divide_n': '1e3', 'Q_all': '1e8', 'dim1_state': '15000', 'dim1_state_saved': '5', 'dim1_state_n': '1000', 'dim1_state_each': '7', 'dim1_action': '15', 'dim1_action_saved': '4', 'dim1_item_state': '15', 'valid_2d_obs': '0', 'valid_pca': '0', 'pca_tau': '0.01', 'reward_r1_weight': '0.0', 'reward_r1_normalize_coef': '9000', 'reward_r2_weight': '0.0', 'reward_r2_normalize_coef': '800', 'reward_r3_weight': '0.0', 'reward_r3_normalize_coef': '1.0', 'reward_r4_weight': '1.0', 'reward_r4_normalize_coef': '800.0', 'init_from_file': '0', 'save_this_frame': '-1', 'initial_stage_step': '360', 'MAX_STEP': '3000', 'REPEAT_TRAIN_TIMES': '50', 'step_dT': '1.0', 'random_seed': '11', 'random_seed_saved': '23', 'replay_buffer_size': '100', 'REPLAY_BUFFER_SIZE': '100', 'REPLAY_START_SIZE': '50', 'BATCH_SIZE': '16', 'GAMMA': '0.99', 'LAYER1_SIZE': '400', 'LAYER2_SIZE': '300', 'LEARNING_RATE': '1e-4', 'TAU': '0.001', 'CRITIC_LAYER1_SIZE': '400', 'CRITIC_LAYER2_SIZE': '300', 'CRITIC_TAU': '0.001', 'CRITIC_LEARNING_RATE': '1e-3', 'CRITIC_L2': '0.01', 'Max_theta_uniqueness': '1.0', 'Min_theta_uniqueness': '0.0', 'Max_theta_substainability': '1.0', 'Min_theta_substainability': '0.0', 'Max_theta_lifecycle': '1.0', 'Min_theta_lifecycle': '0.0', 'Max_theta_lower_ctr': '0.1', 'Min_theta_lower_ctr': '0.01', 'Max_theta_higher_ctr': '0.15', 'Min_theta_higher_ctr': '0.05', 'Max_theta_lifetime': '100', 'Min_theta_lifetime': '10', 'Max_ctr_noise_rate': '0.2', 'Max_q_startup': '1e6', 'Min_q_startup': '1e4', 'Max_time_startup2decline': '90', 'Min_time_startup2decline': '30', 'Max_time_startup': '30', 'Min_time_startup': '5', 'Max_time_maturity': '90', 'Min_time_maturity': '30', 'Max_time_decline': '60', 'Min_time_decline': '30', 'Max_init_q': '1e4', 'Min_init_q': '1e3', 'record_state_max_num': '42', 'startup_item_rate': '0.2', 'new_maturity_fresh_time': '2', 'im_feature_dim': '7', 'im_output_dim': '2', 'sampling_times': '1', 'write_summary': '1'}
+<tf.Variable 'W1:0' shape=(7, 48) dtype=float32_ref>
+<tf.Variable 'b1:0' shape=(48,) dtype=float32_ref>
+<tf.Variable 'W2:0' shape=(48, 48) dtype=float32_ref>
+<tf.Variable 'b2:0' shape=(48,) dtype=float32_ref>
+<tf.Variable 'W30:0' shape=(7, 24) dtype=float32_ref>
+<tf.Variable 'b30:0' shape=(24,) dtype=float32_ref>
+<tf.Variable 'W40:0' shape=(24, 12) dtype=float32_ref>
+<tf.Variable 'b40:0' shape=(12,) dtype=float32_ref>
+<tf.Variable 'W50:0' shape=(7, 1) dtype=float32_ref>
+<tf.Variable 'b50:0' shape=(1,) dtype=float32_ref>
+<tf.Variable 'W31:0' shape=(7, 24) dtype=float32_ref>
+<tf.Variable 'b31:0' shape=(24,) dtype=float32_ref>
+<tf.Variable 'W41:0' shape=(24, 12) dtype=float32_ref>
+<tf.Variable 'b41:0' shape=(12,) dtype=float32_ref>
+<tf.Variable 'W51:0' shape=(7, 1) dtype=float32_ref>
+<tf.Variable 'b51:0' shape=(1,) dtype=float32_ref>
+scaling actions by 1.0 before executing in env
+-----len: 0 0
+actor---False
+critic---True
+--------: (?, 15000) (?, 15)
+----trainable variable __call_
+<tf.Variable 'critic/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'critic/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/dense_1/kernel:0' shape=(79, 64) dtype=float32_ref>
+<tf.Variable 'critic/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/dense_2/kernel:0' shape=(64, 1) dtype=float32_ref>
+<tf.Variable 'critic/dense_2/bias:0' shape=(1,) dtype=float32_ref>
+critic---True
+--------: (?, 15000) (?, 15)
+----trainable variable __call_
+<tf.Variable 'critic/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'critic/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/dense_1/kernel:0' shape=(79, 64) dtype=float32_ref>
+<tf.Variable 'critic/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/dense_2/kernel:0' shape=(64, 1) dtype=float32_ref>
+<tf.Variable 'critic/dense_2/bias:0' shape=(1,) dtype=float32_ref>
+actor---True
+critic---True
+--------: (?, 15000) (?, 15)
+----trainable variable __call_
+<tf.Variable 'targetcritic/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_1/kernel:0' shape=(79, 64) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_2/kernel:0' shape=(64, 1) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_2/bias:0' shape=(1,) dtype=float32_ref>
+setting up actor optimizer
+  actor shapes: [[15000, 64], [64], [64], [64], [64, 64], [64], [64], [64], [64, 15], [15]]
+  actor params: 965455
+setting up critic optimizer
+  regularizing: critic/dense/kernel:0
+  regularizing: critic/dense_1/kernel:0
+  regularizing: critic/dense_2/kernel:0
+  applying l2 regularization with 0.01
+  critic shapes: [[15000, 64], [64], [64], [64], [79, 64], [64], [64], [64], [64, 1], [1]]
+  critic params: 965505
+setting up target updates ...
+  targetactor/dense/kernel:0 <- actor/dense/kernel:0
+  targetactor/dense/bias:0 <- actor/dense/bias:0
+  targetactor/LayerNorm/beta:0 <- actor/LayerNorm/beta:0
+  targetactor/LayerNorm/gamma:0 <- actor/LayerNorm/gamma:0
+  targetactor/dense_1/kernel:0 <- actor/dense_1/kernel:0
+  targetactor/dense_1/bias:0 <- actor/dense_1/bias:0
+  targetactor/LayerNorm_1/beta:0 <- actor/LayerNorm_1/beta:0
+  targetactor/LayerNorm_1/gamma:0 <- actor/LayerNorm_1/gamma:0
+  targetactor/dense_2/kernel:0 <- actor/dense_2/kernel:0
+  targetactor/dense_2/bias:0 <- actor/dense_2/bias:0
+-------len2: 10 10
+setting up target updates ...
+  targetcritic/dense/kernel:0 <- critic/dense/kernel:0
+  targetcritic/dense/bias:0 <- critic/dense/bias:0
+  targetcritic/LayerNorm/beta:0 <- critic/LayerNorm/beta:0
+  targetcritic/LayerNorm/gamma:0 <- critic/LayerNorm/gamma:0
+  targetcritic/dense_1/kernel:0 <- critic/dense_1/kernel:0
+  targetcritic/dense_1/bias:0 <- critic/dense_1/bias:0
+  targetcritic/LayerNorm_1/beta:0 <- critic/LayerNorm_1/beta:0
+  targetcritic/LayerNorm_1/gamma:0 <- critic/LayerNorm_1/gamma:0
+  targetcritic/dense_2/kernel:0 <- critic/dense_2/kernel:0
+  targetcritic/dense_2/bias:0 <- critic/dense_2/bias:0
+Using agent with the following configuration:
+dict_items([('name', 'test'), ('obs0', <tf.Tensor 'obs0:0' shape=(?, 15000) dtype=float32>), ('obs1', <tf.Tensor 'obs1:0' shape=(?, 15000) dtype=float32>), ('terminals1', <tf.Tensor 'terminals1:0' shape=(?, 1) dtype=float32>), ('rewards', <tf.Tensor 'rewards:0' shape=(?, 1) dtype=float32>), ('actions', <tf.Tensor 'actions:0' shape=(?, 15) dtype=float32>), ('gamma', 0.99), ('tau', 0.01), ('memory', <core.memory.Memory object at 0x7fb2c4295e10>), ('normalize_observations', False), ('normalize_returns', False), ('action_noise', NormalActionNoise(mu=[ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.], sigma=[ 0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2  0.2])), ('param_noise', None), ('action_range', (-1.0, 1.0)), ('return_range', (-inf, inf)), ('observation_range', (-5.0, 5.0)), ('critic', <core.models.Critic object at 0x7fb2c42acb38>), ('actor', <core.models.Actor object at 0x7fb2c408fcf8>), ('actor_lr', 0.0001), ('critic_lr', 0.001), ('clip_norm', None), ('enable_popart', False), ('reward_scale', 1.0), ('batch_size', 64), ('stats_sample', None), ('critic_l2_reg', 0.01), ('ckp_dir', 'dat/param_high_dim1d'), ('global_step', <tf.Variable 'global_step:0' shape=() dtype=int64_ref>), ('obs_rms', None), ('ret_rms', None), ('target_actor', <core.models.Actor object at 0x7fb2c4241be0>), ('target_critic', <core.models.Critic object at 0x7fb2c41cdcc0>), ('actor_tf', <tf.Tensor 'actor/Tanh:0' shape=(?, 15) dtype=float32>), ('normalized_critic_tf', <tf.Tensor 'critic/dense_3/BiasAdd:0' shape=(?, 1) dtype=float32>), ('critic_tf', <tf.Tensor 'clip_by_value_2:0' shape=(?, 1) dtype=float32>), ('normalized_critic_with_actor_tf', <tf.Tensor 'critic_1/dense_3/BiasAdd:0' shape=(?, 1) dtype=float32>), ('critic_with_actor_tf', <tf.Tensor 'clip_by_value_3:0' shape=(?, 1) dtype=float32>), ('target_Q', <tf.Tensor 'add:0' shape=(?, 1) dtype=float32>), ('metrics', [<tf.Tensor 'test_training/actor_loss:0' shape=() dtype=string>, <tf.Tensor 'test_training/critic_loss:0' shape=() dtype=string>, <tf.Tensor 'test_training/reference_Q_mean:0' shape=() dtype=string>, <tf.Tensor 'test_training/reference_action_mean:0' shape=() dtype=string>, <tf.Tensor 'test_input/action_avg:0' shape=() dtype=string>, <tf.Tensor 'test_input/reward_avg:0' shape=() dtype=string>, <tf.Tensor 'test_input/obs:0' shape=() dtype=string>, <tf.Tensor 'test_input/action:0' shape=() dtype=string>]), ('actor_loss', <tf.Tensor 'Neg:0' shape=() dtype=float32>), ('actor_grads', [<tf.Tensor 'gradients/actor/dense/MatMul_grad/MatMul_1:0' shape=(15000, 64) dtype=float32>, <tf.Tensor 'gradients/actor/dense/BiasAdd_grad/BiasAddGrad:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients/actor/LayerNorm/batchnorm/sub_grad/Reshape:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients/actor/LayerNorm/batchnorm/mul_grad/Reshape_1:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients/actor/dense_2/MatMul_grad/MatMul_1:0' shape=(64, 64) dtype=float32>, <tf.Tensor 'gradients/actor/dense_2/BiasAdd_grad/BiasAddGrad:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients/actor/LayerNorm_1/batchnorm/sub_grad/Reshape:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients/actor/LayerNorm_1/batchnorm/mul_grad/Reshape_1:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients/actor/dense_3/MatMul_grad/MatMul_1:0' shape=(64, 15) dtype=float32>, <tf.Tensor 'gradients/actor/dense_3/BiasAdd_grad/BiasAddGrad:0' shape=(15,) dtype=float32>]), ('actor_optimizer', <tensorflow.python.training.adam.AdamOptimizer object at 0x7fb27c7bd6a0>), ('actor_train_op', <tf.Operation 'Adam' type=AssignAdd>), ('critic_loss', <tf.Tensor 'add_1:0' shape=() dtype=float32>), ('critic_grads', [<tf.Tensor 'gradients_1/AddN_6:0' shape=(15000, 64) dtype=float32>, <tf.Tensor 'gradients_1/critic/dense/BiasAdd_grad/BiasAddGrad:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients_1/critic/LayerNorm/batchnorm/sub_grad/Reshape:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients_1/critic/LayerNorm/batchnorm/mul_grad/Reshape_1:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients_1/AddN_3:0' shape=(79, 64) dtype=float32>, <tf.Tensor 'gradients_1/critic/dense_2/BiasAdd_grad/BiasAddGrad:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients_1/critic/LayerNorm_1/batchnorm/sub_grad/Reshape:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients_1/critic/LayerNorm_1/batchnorm/mul_grad/Reshape_1:0' shape=(64,) dtype=float32>, <tf.Tensor 'gradients_1/AddN:0' shape=(64, 1) dtype=float32>, <tf.Tensor 'gradients_1/critic/dense_3/BiasAdd_grad/BiasAddGrad:0' shape=(1,) dtype=float32>]), ('critic_optimizer', <tensorflow.python.training.adam.AdamOptimizer object at 0x7fb27c6e4e80>), ('critic_train_op', <tf.Operation 'Adam_1' type=AssignAdd>), ('state_monitor', <tf.Tensor 'mul_2:0' shape=(?, 15000) dtype=float32>), ('action_monitor', <tf.Tensor 'mul_3:0' shape=(?, 15) dtype=float32>), ('reward_monitor', <tf.Tensor 'mul_4:0' shape=(?, 1) dtype=float32>), ('merged', <tf.Tensor 'Merge/MergeSummary:0' shape=() dtype=string>), ('target_init_updates', [<tf.Operation 'group_deps' type=NoOp>, <tf.Operation 'group_deps_2' type=NoOp>]), ('target_soft_updates', [<tf.Operation 'group_deps_1' type=NoOp>, <tf.Operation 'group_deps_3' type=NoOp>]), ('saver', <tensorflow.python.training.saver.Saver object at 0x7fb25c543940>), ('init', <tf.Operation 'init' type=NoOp>), ('rewards_val', array([[ 0.0202184]])), ('terminals1_val', array([[ 0.83261985]])), ('actions_val', array([[ 0.77815675,  0.87001215,  0.97861834,  0.79915856,  0.46147936,
+         0.78052918,  0.11827443,  0.63992102,  0.14335329,  0.94466892,
+         0.52184832,  0.41466194,  0.26455561,  0.77423369,  0.45615033]])), ('obs1_val', array([[ 0.56843395,  0.0187898 ,  0.6176355 , ...,  0.46161675,
+         0.71566021,  0.60435755]])), ('obs0_val', array([[ 0.29129393,  0.93588236,  0.45631744, ...,  0.22444552,
+         0.6287925 ,  0.66916877]]))])
+<tf.Variable 'actor/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'actor/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'actor/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'actor/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'actor/dense_1/kernel:0' shape=(64, 64) dtype=float32_ref>
+<tf.Variable 'actor/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'actor/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'actor/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'actor/dense_2/kernel:0' shape=(64, 15) dtype=float32_ref>
+<tf.Variable 'actor/dense_2/bias:0' shape=(15,) dtype=float32_ref>
+<tf.Variable 'critic/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'critic/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/dense_1/kernel:0' shape=(79, 64) dtype=float32_ref>
+<tf.Variable 'critic/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'critic/dense_2/kernel:0' shape=(64, 1) dtype=float32_ref>
+<tf.Variable 'critic/dense_2/bias:0' shape=(1,) dtype=float32_ref>
+<tf.Variable 'targetactor/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'targetactor/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetactor/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetactor/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetactor/dense_1/kernel:0' shape=(64, 64) dtype=float32_ref>
+<tf.Variable 'targetactor/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetactor/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetactor/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetactor/dense_2/kernel:0' shape=(64, 15) dtype=float32_ref>
+<tf.Variable 'targetactor/dense_2/bias:0' shape=(15,) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense/kernel:0' shape=(15000, 64) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense/bias:0' shape=(64,) dtype=float32_ref>2018-03-22 13:50:40.190147: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:5e:00.0, compute capability: 6.0)
+
+<tf.Variable 'targetcritic/LayerNorm/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_1/kernel:0' shape=(79, 64) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_1/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm_1/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/LayerNorm_1/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_2/kernel:0' shape=(64, 1) dtype=float32_ref>
+<tf.Variable 'targetcritic/dense_2/bias:0' shape=(1,) dtype=float32_ref>
+[loop]0[time>start]:0.000
+[loop]0[time>env]:0.000
+[loop]0[time>env]:0.519
+(15,) 1 (15000,) 0 0.191291624545
+[loop]0[time>store]:0.000
+[loop]0[time>train]:0.000
+[loop]1[time>start]:0.000
+[loop]1[time>env]:0.000
+[loop]1[time>env]:0.437
+(15,) 1 (15000,) 1 0.242509949055
+[loop]1[time>store]:0.000
+[loop]1[time>train]:0.000
+[loop]2[time>start]:0.000
+[loop]2[time>env]:0.000
+[loop]2[time>env]:0.443
+(15,) 1 (15000,) 2 0.283940787172
+[loop]2[time>store]:0.000
+[loop]2[time>train]:0.000
+[loop]3[time>start]:0.000
+[loop]3[time>env]:0.000
+[loop]3[time>env]:0.440
+(15,) 1 (15000,) 3 0.319018652623
+[loop]3[time>store]:0.000
+[loop]3[time>train]:0.000
+[loop]4[time>start]:0.000
+[loop]4[time>env]:0.000
+[loop]4[time>env]:0.435
+(15,) 1 (15000,) 4 0.349846257363
+[loop]4[time>store]:0.000
+[loop]4[time>train]:0.000
+[loop]5[time>start]:0.000
+[loop]5[time>env]:0.000
+[loop]5[time>env]:0.436
+(15,) 1 (15000,) 5 0.377745606557
+[loop]5[time>store]:0.000
+[loop]5[time>train]:0.000
+[loop]6[time>start]:0.000
+[loop]6[time>env]:0.000
+[loop]6[time>env]:0.441
+(15,) 1 (15000,) 6 0.403706750522
+[loop]6[time>store]:0.000
+[loop]6[time>train]:0.000
+[loop]7[time>start]:0.000
+[loop]7[time>env]:0.000
+[loop]7[time>env]:0.443
+(15,) 1 (15000,) 7 0.427519141096
+[loop]7[time>store]:0.000
+[loop]7[time>train]:0.000
+[loop]8[time>start]:0.000
+[loop]8[time>env]:0.000
+[loop]8[time>env]:0.437
+(15,) 1 (15000,) 8 0.449566894342
+[loop]8[time>store]:0.000
+[loop]8[time>train]:0.000
+[loop]9[time>start]:0.000
+[loop]9[time>env]:0.000
+[loop]9[time>env]:0.438
+(15,) 1 (15000,) 9 0.470375802031
+[loop]9[time>store]:0.000
+[loop]9[time>train]:0.000
+[loop]10[time>start]:0.000
+[loop]10[time>env]:0.000
+[loop]10[time>env]:0.438
+(15,) 1 (15000,) 10 0.490265499477
+[loop]10[time>store]:0.000
+[loop]10[time>train]:0.000
+[loop]11[time>start]:0.000
+[loop]11[time>env]:0.000
+[loop]11[time>env]:0.439
+(15,) 1 (15000,) 11 0.508718212328
+[loop]11[time>store]:0.000
+[loop]11[time>train]:0.000
+[loop]12[time>start]:0.000
+[loop]12[time>env]:0.000
+[loop]12[time>env]:0.441
+(15,) 1 (15000,) 12 0.526408869369
+[loop]12[time>store]:0.000
+[loop]12[time>train]:0.000
+[loop]13[time>start]:0.000
+[loop]13[time>env]:0.000
+[loop]13[time>env]:0.442
+(15,) 1 (15000,) 13 0.542974064431
+[loop]13[time>store]:0.000
+[loop]13[time>train]:0.000
+[loop]14[time>start]:0.000
+[loop]14[time>env]:0.000
+[loop]14[time>env]:0.441
+(15,) 1 (15000,) 14 0.558912530247
+[loop]14[time>store]:0.000
+[loop]14[time>train]:0.000
+[loop]15[time>start]:0.000
+[loop]15[time>env]:0.000
+[loop]15[time>env]:0.440
+(15,) 1 (15000,) 15 0.574005777569
+[loop]15[time>store]:0.000
+[loop]15[time>train]:0.000
+[loop]16[time>start]:0.000
+[loop]16[time>env]:0.000
+[loop]16[time>env]:0.440
+(15,) 1 (15000,) 16 0.588344955389
+[loop]16[time>store]:0.000
+[loop]16[time>train]:0.000
+[loop]17[time>start]:0.000
+[loop]17[time>env]:0.000
+[loop]17[time>env]:0.444
+(15,) 1 (15000,) 17 0.602146909097
+[loop]17[time>store]:0.000
+[loop]17[time>train]:0.000
+[loop]18[time>start]:0.000
+[loop]18[time>env]:0.000
+[loop]18[time>env]:0.441
+(15,) 1 (15000,) 18 0.615426395426
+[loop]18[time>store]:0.000
+[loop]18[time>train]:0.000
+[loop]19[time>start]:0.000
+[loop]19[time>env]:0.000
+[loop]19[time>env]:0.442
+(15,) 1 (15000,) 19 0.628059100678
+[loop]19[time>store]:0.000
+[loop]19[time>train]:0.000
+[loop]20[time>start]:0.000
+[loop]20[time>env]:0.000
+[loop]20[time>env]:0.441
+(15,) 1 (15000,) 20 0.640192585107
+[loop]20[time>store]:0.000
+[loop]20[time>train]:0.000
+[loop]21[time>start]:0.000
+[loop]21[time>env]:0.000
+[loop]21[time>env]:0.446
+(15,) 1 (15000,) 21 0.65201452766
+[loop]21[time>store]:0.000
+[loop]21[time>train]:0.000
+[loop]22[time>start]:0.000
+[loop]22[time>env]:0.000
+[loop]22[time>env]:0.444
+(15,) 1 (15000,) 22 0.663278091347
+[loop]22[time>store]:0.000
+[loop]22[time>train]:0.000
+[loop]23[time>start]:0.000
+[loop]23[time>env]:0.000
+[loop]23[time>env]:0.441
+(15,) 1 (15000,) 23 0.674364094828
+[loop]23[time>store]:0.000
+[loop]23[time>train]:0.000
+[loop]24[time>start]:0.000
+[loop]24[time>env]:0.000
+[loop]24[time>env]:0.442
+(15,) 1 (15000,) 24 0.684797966162
+[loop]24[time>store]:0.000
+[loop]24[time>train]:0.000
+[loop]25[time>start]:0.000
+[loop]25[time>env]:0.000
+[loop]25[time>env]:0.444
+(15,) 1 (15000,) 25 0.695008166627
+[loop]25[time>store]:0.000
+[loop]25[time>train]:0.000
+[loop]26[time>start]:0.000
+[loop]26[time>env]:0.000
+[loop]26[time>env]:0.441
+(15,) 1 (15000,) 26 0.70498501969
+[loop]26[time>store]:0.000
+[loop]26[time>train]:0.000
+[loop]27[time>start]:0.000
+[loop]27[time>env]:0.000
+[loop]27[time>env]:0.446
+(15,) 1 (15000,) 27 0.714594360978
+[loop]27[time>store]:0.000
+[loop]27[time>train]:0.000
+[loop]28[time>start]:0.000
+[loop]28[time>env]:0.000
+[loop]28[time>env]:0.457
+(15,) 1 (15000,) 28 0.723939188706
+[loop]28[time>store]:0.000
+[loop]28[time>train]:0.000
+[loop]29[time>start]:0.000
+[loop]29[time>env]:0.000
+[loop]29[time>env]:0.450
+(15,) 1 (15000,) 29 0.732939781778
+[loop]29[time>store]:0.000
+[loop]29[time>train]:0.000
+[loop]30[time>start]:0.000
+[loop]30[time>env]:0.000
+[loop]30[time>env]:0.446
+(15,) 1 (15000,) 30 0.743448992453
+[loop]30[time>store]:0.000
+[loop]30[time>train]:0.000
+[loop]31[time>start]:0.000
+[loop]31[time>env]:0.000
+[loop]31[time>env]:0.449
+(15,) 1 (15000,) 31 0.753399165691
+[loop]31[time>store]:0.000
+[loop]31[time>train]:0.000
+[loop]32[time>start]:0.000
+[loop]32[time>env]:0.000
+[loop]32[time>env]:0.633
+(15,) 1 (15000,) 32 0.760238752241
+[loop]32[time>store]:0.000
+[loop]32[time>train]:0.000
+[loop]33[time>start]:0.000
+[loop]33[time>env]:0.000
+[loop]33[time>env]:0.585
+(15,) 1 (15000,) 33 0.772910854086
+[loop]33[time>store]:0.000
+[loop]33[time>train]:0.000
+[loop]34[time>start]:0.000
+[loop]34[time>env]:0.000
+[loop]34[time>env]:0.638
+(15,) 1 (15000,) 34 0.781354058769
+[loop]34[time>store]:0.000
+[loop]34[time>train]:0.000
+[loop]35[time>start]:0.000
+[loop]35[time>env]:0.000
+[loop]35[time>env]:0.595
+(15,) 1 (15000,) 35 0.789909239081
+[loop]35[time>store]:0.000
+[loop]35[time>train]:0.000
+[loop]36[time>start]:0.000
+[loop]36[time>env]:0.000
+[loop]36[time>env]:0.643
+(15,) 1 (15000,) 36 0.79917622356
+[loop]36[time>store]:0.000
+[loop]36[time>train]:0.000
+[loop]37[time>start]:0.000
+[loop]37[time>env]:0.000
+[loop]37[time>env]:0.633
+(15,) 1 (15000,) 37 0.806757225237
+[loop]37[time>store]:0.000
+[loop]37[time>train]:0.000
+[loop]38[time>start]:0.000
+[loop]38[time>env]:0.000
+[loop]38[time>env]:0.561
+(15,) 1 (15000,) 38 0.814598253289
+[loop]38[time>store]:0.000
+[loop]38[time>train]:0.000
+[loop]39[time>start]:0.000
+[loop]39[time>env]:0.000
+[loop]39[time>env]:0.578
+(15,) 1 (15000,) 39 0.822952392459
+[loop]39[time>store]:0.000
+[loop]39[time>train]:0.000
+[loop]40[time>start]:0.000
+[loop]40[time>env]:0.000
+[loop]40[time>env]:0.603
+(15,) 1 (15000,) 40 0.82836439567
+[loop]40[time>store]:0.000
+[loop]40[time>train]:0.000
+[loop]41[time>start]:0.000
+[loop]41[time>env]:0.000
+[loop]41[time>env]:0.665
+(15,) 1 (15000,) 41 0.835479445228
+[loop]41[time>store]:0.000
+[loop]41[time>train]:0.000
+[loop]42[time>start]:0.000
+[loop]42[time>env]:0.000
+[loop]42[time>env]:0.641
+(15,) 1 (15000,) 42 0.841803292924
+[loop]42[time>store]:0.000
+[loop]42[time>train]:0.000
+[loop]43[time>start]:0.000
+[loop]43[time>env]:0.000
+[loop]43[time>env]:0.628
+(15,) 1 (15000,) 43 0.848869398259
+[loop]43[time>store]:0.000
+[loop]43[time>train]:0.000
+[loop]44[time>start]:0.000
+[loop]44[time>env]:0.000
+[loop]44[time>env]:0.611
+(15,) 1 (15000,) 44 0.854413188738
+[loop]44[time>store]:0.000
+[loop]44[time>train]:0.000
+[loop]45[time>start]:0.000
+[loop]45[time>env]:0.000
+[loop]45[time>env]:0.613
+(15,) 1 (15000,) 45 0.860233614648
+[loop]45[time>store]:0.000
+[loop]45[time>train]:0.000
+[loop]46[time>start]:0.000
+[loop]46[time>env]:0.000
+[loop]46[time>env]:0.595
+(15,) 1 (15000,) 46 0.866069991283
+[loop]46[time>store]:0.000
+[loop]46[time>train]:0.000
+[loop]47[time>start]:0.000
+[loop]47[time>env]:0.000
+[loop]47[time>env]:0.617
+(15,) 1 (15000,) 47 0.871526362033
+[loop]47[time>store]:0.000
+[loop]47[time>train]:0.000
+[loop]48[time>start]:0.000
+[loop]48[time>env]:0.000
+[loop]48[time>env]:0.555
+(15,) 1 (15000,) 48 0.876858791521
+[loop]48[time>store]:0.000
+[loop]48[time>train]:0.000
+[loop]49[time>start]:0.000
+[loop]49[time>env]:0.000
+[loop]49[time>env]:0.661
+(15,) 1 (15000,) 49 0.881299182244
+[loop]49[time>store]:0.000
+[loop]49[time>train]:0.000
+[loop]50[time>start]:0.000
+[loop]50[time>env]:0.000
+[loop]50[time>env]:0.657
+(15,) 1 (15000,) 50 0.88636339919
+[loop]50[time>store]:0.000
+[loop]50[time>train]:0.000
+[loop]51[time>start]:0.000
+[loop]51[time>env]:0.000
+[loop]51[time>env]:0.561
+(15,) 1 (15000,) 51 0.891388433092
+[loop]51[time>store]:0.000
+[loop]51[time>train]:0.000
+[loop]52[time>start]:0.000
+[loop]52[time>env]:0.000
+[loop]52[time>env]:0.613
+(15,) 1 (15000,) 52 0.896650032315
+[loop]52[time>store]:0.000
+[loop]52[time>train]:0.000
+[loop]53[time>start]:0.000
+[loop]53[time>env]:0.000
+[loop]53[time>env]:0.522
+(15,) 1 (15000,) 53 0.901091653949
+[loop]53[time>store]:0.000
+[loop]53[time>train]:0.000
+[loop]54[time>start]:0.000
+[loop]54[time>env]:0.000
+[loop]54[time>env]:0.652
+(15,) 1 (15000,) 54 0.903926545618
+[loop]54[time>store]:0.000
+[loop]54[time>train]:0.000
+[loop]55[time>start]:0.000
+[loop]55[time>env]:0.000
+[loop]55[time>env]:0.601
+(15,) 1 (15000,) 55 0.908777338541
+[loop]55[time>store]:0.000
+[loop]55[time>train]:0.000
+[loop]56[time>start]:0.000
+[loop]56[time>env]:0.000
+[loop]56[time>env]:0.618
+(15,) 1 (15000,) 56 0.912967246352
+[loop]56[time>store]:0.000
+[loop]56[time>train]:0.000
+[loop]57[time>start]:0.000
+[loop]57[time>env]:0.000
+[loop]57[time>env]:0.627
+(15,) 1 (15000,) 57 0.916612324962
+[loop]57[time>store]:0.000
+[loop]57[time>train]:0.000
+[loop]58[time>start]:0.000
+[loop]58[time>env]:0.000
+[loop]58[time>env]:0.545
+(15,) 1 (15000,) 58 0.921498347168
+[loop]58[time>store]:0.000
+[loop]58[time>train]:0.000
+[loop]59[time>start]:0.000
+[loop]59[time>env]:0.000
+[loop]59[time>env]:0.619
+(15,) 1 (15000,) 59 0.924250925921
+[loop]59[time>store]:0.000
+[loop]59[time>train]:0.000
+[loop]60[time>start]:0.000
+[loop]60[time>env]:0.000
+[loop]60[time>env]:0.534
+(15,) 1 (15000,) 60 0.926273942279
+[loop]60[time>store]:0.000
+[loop]60[time>train]:0.000
+[loop]61[time>start]:0.000
+[loop]61[time>env]:0.000
+[loop]61[time>env]:0.631
+(15,) 1 (15000,) 61 0.927473139245
+[loop]61[time>store]:0.000
+[loop]61[time>train]:0.000
+[loop]62[time>start]:0.000
+[loop]62[time>env]:0.000
+[loop]62[time>env]:0.458
+(15,) 1 (15000,) 62 0.932880634265
+[loop]62[time>store]:0.000
+[loop]62[time>train]:0.000
+[loop]63[time>start]:0.000
+[loop]63[time>env]:0.000
+[loop]63[time>env]:0.468
+(15,) 1 (15000,) 63 0.933537010367
+[loop]63[time>store]:0.000
+[loop]63[time>train]:0.000
+[loop]64[time>start]:0.000
+[loop]64[time>env]:0.000
+[loop]64[time>env]:0.481
+(15,) 1 (15000,) 64 0.93483121297
+[loop]64[time>store]:0.000
+[loop]64[time>train]:0.000
+[loop]65[time>start]:0.000
+[loop]65[time>env]:0.000
+[loop]65[time>env]:0.474
+(15,) 1 (15000,) 65 0.936782240348
+[loop]65[time>store]:0.000
+[loop]65[time>train]:0.000
+[loop]66[time>start]:0.000
+[loop]66[time>env]:0.000
+[loop]66[time>env]:0.570
+(15,) 1 (15000,) 66 0.93719457087
+[loop]66[time>store]:0.000
+[loop]66[time>train]:0.000
+[loop]67[time>start]:0.000
+[loop]67[time>env]:0.000
+[loop]67[time>env]:0.549
+(15,) 1 (15000,) 67 0.939990694223
+[loop]67[time>store]:0.000
+[loop]67[time>train]:0.000
+[loop]68[time>start]:0.000
+[loop]68[time>env]:0.000
+[loop]68[time>env]:0.478
+(15,) 1 (15000,) 68 0.941910771807
+[loop]68[time>store]:0.000
+[loop]68[time>train]:0.000
+[loop]69[time>start]:0.000
+[loop]69[time>env]:0.000
+[loop]69[time>env]:0.573
+(15,) 1 (15000,) 69 0.942600817902
+[loop]69[time>store]:0.000
+[loop]69[time>train]:0.000
+[loop]70[time>start]:0.000
+[loop]70[time>env]:0.000
+[loop]70[time>env]:0.537
+(15,) 1 (15000,) 70 0.945370117875
+[loop]70[time>store]:0.000
+[loop]70[time>train]:0.000
+[loop]71[time>start]:0.000
+[loop]71[time>env]:0.000
+[loop]71[time>env]:0.620
+(15,) 1 (15000,) 71 0.9456810083
+[loop]71[time>store]:0.000
+[loop]71[time>train]:0.000
+[loop]72[time>start]:0.000
+[loop]72[time>env]:0.000
+[loop]72[time>env]:0.542
+(15,) 1 (15000,) 72 0.947470546175
+[loop]72[time>store]:0.000
+[loop]72[time>train]:0.000
+[loop]73[time>start]:0.000
+[loop]73[time>env]:0.000
+[loop]73[time>env]:0.665
+(15,) 1 (15000,) 73 0.947953176488
+[loop]73[time>store]:0.000
+[loop]73[time>train]:0.000
+[loop]74[time>start]:0.000
+[loop]74[time>env]:0.000
+[loop]74[time>env]:0.735
+(15,) 1 (15000,) 74 0.948490840586
+[loop]74[time>store]:0.000
+[loop]74[time>train]:0.000
+[loop]75[time>start]:0.000
+[loop]75[time>env]:0.000
+[loop]75[time>env]:0.667
+(15,) 1 (15000,) 75 0.948768909374
+[loop]75[time>store]:0.000
+[loop]75[time>train]:0.000
+[loop]76[time>start]:0.000
+[loop]76[time>env]:0.000
+[loop]76[time>env]:0.682
+(15,) 1 (15000,) 76 0.948718212644
+[loop]76[time>store]:0.000
+[loop]76[time>train]:0.000
+[loop]77[time>start]:0.000
+[loop]77[time>env]:0.000
+[loop]77[time>env]:0.677
+(15,) 1 (15000,) 77 0.951460720396
+[loop]77[time>store]:0.000
+[loop]77[time>train]:0.000
+[loop]78[time>start]:0.000
+[loop]78[time>env]:0.000
+[loop]78[time>env]:0.784
+(15,) 1 (15000,) 78 0.949187860277
+[loop]78[time>store]:0.000
+[loop]78[time>train]:0.000
+[loop]79[time>start]:0.000
+[loop]79[time>env]:0.000
+[loop]79[time>env]:0.777
+(15,) 1 (15000,) 79 0.95091789681
+[loop]79[time>store]:0.000
+[loop]79[time>train]:0.000
+[loop]80[time>start]:0.000
+[loop]80[time>env]:0.000
+[loop]80[time>env]:0.786
+(15,) 1 (15000,) 80 0.951080970535
+[loop]80[time>store]:0.000
+[loop]80[time>train]:0.000
+[loop]81[time>start]:0.000
+[loop]81[time>env]:0.000
+[loop]81[time>env]:0.814
+(15,) 1 (15000,) 81 0.95122977569
+[loop]81[time>store]:0.000
+[loop]81[time>train]:0.000
+[loop]82[time>start]:0.000
+[loop]82[time>env]:0.000
+[loop]82[time>env]:0.752
+(15,) 1 (15000,) 82 0.951528621481
+[loop]82[time>store]:0.000
+[loop]82[time>train]:0.000
+[loop]83[time>start]:0.000
+[loop]83[time>env]:0.000
+[loop]83[time>env]:0.800
+(15,) 1 (15000,) 83 0.950483023963
+[loop]83[time>store]:0.000
+[loop]83[time>train]:0.000
+[loop]84[time>start]:0.000
+[loop]84[time>env]:0.000
+[loop]84[time>env]:0.839
+(15,) 1 (15000,) 84 0.950043535929
+[loop]84[time>store]:0.000
+[loop]84[time>train]:0.000
+[loop]85[time>start]:0.000
+[loop]85[time>env]:0.000
+[loop]85[time>env]:0.853
+(15,) 1 (15000,) 85 0.950605704059
+[loop]85[time>store]:0.000
+[loop]85[time>train]:0.000
+[loop]86[time>start]:0.000
+[loop]86[time>env]:0.000
+[loop]86[time>env]:0.798
+(15,) 1 (15000,) 86 0.951193421366
+[loop]86[time>store]:0.000
+[loop]86[time>train]:0.000
+[loop]87[time>start]:0.000
+[loop]87[time>env]:0.000
+[loop]87[time>env]:0.902
+(15,) 1 (15000,) 87 0.945813238965
+[loop]87[time>store]:0.000
+[loop]87[time>train]:0.000
+[loop]88[time>start]:0.000
+[loop]88[time>env]:0.000
+[loop]88[time>env]:0.826
+(15,) 1 (15000,) 88 0.950342519059
+[loop]88[time>store]:0.000
+[loop]88[time>train]:0.000
+[loop]89[time>start]:0.000
+[loop]89[time>env]:0.000
+[loop]89[time>env]:0.929
+(15,) 1 (15000,) 89 0.946185326609
+[loop]89[time>store]:0.000
+[loop]89[time>train]:0.000
+[loop]90[time>start]:0.000
+[loop]90[time>env]:0.000
+[loop]90[time>env]:0.917
+(15,) 1 (15000,) 90 0.945530833651
+[loop]90[time>store]:0.000
+[loop]90[time>train]:0.000
+[loop]91[time>start]:0.000
+[loop]91[time>env]:0.000
+[loop]91[time>env]:0.924
+(15,) 1 (15000,) 91 0.943169403815
+[loop]91[time>store]:0.000
+[loop]91[time>train]:0.000
+[loop]92[time>start]:0.000
+[loop]92[time>env]:0.000
+[loop]92[time>env]:1.023
+(15,) 1 (15000,) 92 0.942814716161
+[loop]92[time>store]:0.000
+[loop]92[time>train]:0.000
+[loop]93[time>start]:0.000
+[loop]93[time>env]:0.000
+[loop]93[time>env]:0.934
+(15,) 1 (15000,) 93 0.940691419654
+[loop]93[time>store]:0.000
+[loop]93[time>train]:0.000
+[loop]94[time>start]:0.000
+[loop]94[time>env]:0.000
+[loop]94[time>env]:1.000
+(15,) 1 (15000,) 94 0.940388894262
+[loop]94[time>store]:0.000
+[loop]94[time>train]:0.000
+[loop]95[time>start]:0.000
+[loop]95[time>env]:0.000
+[loop]95[time>env]:0.964
+(15,) 1 (15000,) 95 0.937655776746
+[loop]95[time>store]:0.000
+[loop]95[time>train]:0.000
+[loop]96[time>start]:0.000
+[loop]96[time>env]:0.000
+[loop]96[time>env]:1.047
+(15,) 1 (15000,) 96 0.937169155079
+[loop]96[time>store]:0.000
+[loop]96[time>train]:0.000
+[loop]97[time>start]:0.000
+[loop]97[time>env]:0.000
+[loop]97[time>env]:0.985
+(15,) 1 (15000,) 97 0.935627343367
+[loop]97[time>store]:0.000
+[loop]97[time>train]:0.000
+[loop]98[time>start]:0.000
+[loop]98[time>env]:0.000
+[loop]98[time>env]:1.086
+(15,) 1 (15000,) 98 0.933399042665
+[loop]98[time>store]:0.000
+[loop]98[time>train]:0.000
+[loop]99[time>start]:0.000
+[loop]99[time>env]:0.000
+[loop]99[time>env]:1.081
+(15,) 1 (15000,) 99 0.932031574714
+[loop]99[time>store]:0.000
+[loop]99[time>train]:0.000
+[loop]100[time>start]:0.000
+[loop]100[time>env]:0.000
+[loop]100[time>env]:0.909
+(15,) 1 (15000,) 100 0.93271742354
+[loop]100[time>store]:0.000
+[loop]100[time>train]:0.000
+[loop]101[time>start]:0.000
+[loop]101[time>env]:0.000
+[loop]101[time>env]:0.944
+(15,) 1 (15000,) 101 0.929686437023
+[loop]101[time>store]:0.000
+[loop]101[time>train]:0.000
+[loop]102[time>start]:0.000
+[loop]102[time>env]:0.000
+[loop]102[time>env]:1.018
+(15,) 1 (15000,) 102 0.925497968643
+[loop]102[time>store]:0.000
+[loop]102[time>train]:0.000
+[loop]103[time>start]:0.000
+[loop]103[time>env]:0.000
+[loop]103[time>env]:1.004
+(15,) 1 (15000,) 103 0.92461731223
+[loop]103[time>store]:0.000
+[loop]103[time>train]:0.000
+[loop]104[time>start]:0.000
+[loop]104[time>env]:0.000
+[loop]104[time>env]:1.127
+(15,) 1 (15000,) 104 0.921280333908
+[loop]104[time>store]:0.000
+[loop]104[time>train]:0.000
+[loop]105[time>start]:0.000
+[loop]105[time>env]:0.000
+[loop]105[time>env]:0.978
+(15,) 1 (15000,) 105 0.924346296367
+[loop]105[time>store]:0.000
+[loop]105[time>train]:0.000
+[loop]106[time>start]:0.000
+[loop]106[time>env]:0.000
+[loop]106[time>env]:0.990
+(15,) 1 (15000,) 106 0.921165737505
+[loop]106[time>store]:0.000
+[loop]106[time>train]:0.000
+[loop]107[time>start]:0.000
+[loop]107[time>env]:0.000
+[loop]107[time>env]:1.019
+(15,) 1 (15000,) 107 0.919157658426
+[loop]107[time>store]:0.000
+[loop]107[time>train]:0.000
+[loop]108[time>start]:0.000
+[loop]108[time>env]:0.000
+[loop]108[time>env]:1.002
+(15,) 1 (15000,) 108 0.918118019693
+[loop]108[time>store]:0.000
+[loop]108[time>train]:0.000
+[loop]109[time>start]:0.000
+[loop]109[time>env]:0.000
+[loop]109[time>env]:1.006
+(15,) 1 (15000,) 109 0.91504153863
+[loop]109[time>store]:0.000
+[loop]109[time>train]:0.000
+[loop]110[time>start]:0.000
+[loop]110[time>env]:0.000
+[loop]110[time>env]:1.031
+(15,) 1 (15000,) 110 0.915373517484
+[loop]110[time>store]:0.000
+[loop]110[time>train]:0.000
+[loop]111[time>start]:0.000
+[loop]111[time>env]:0.000
+[loop]111[time>env]:1.028
+(15,) 1 (15000,) 111 0.9138651143
+[loop]111[time>store]:0.000
+[loop]111[time>train]:0.000
+[loop]112[time>start]:0.000
+[loop]112[time>env]:0.000
+[loop]112[time>env]:0.963
+(15,) 1 (15000,) 112 0.914327862873
+[loop]112[time>store]:0.000
+[loop]112[time>train]:0.000
+[loop]113[time>start]:0.000
+[loop]113[time>env]:0.000
+[loop]113[time>env]:0.966
+(15,) 1 (15000,) 113 0.912650956134
+[loop]113[time>store]:0.000
+[loop]113[time>train]:0.000
+[loop]114[time>start]:0.000
+[loop]114[time>env]:0.000
+[loop]114[time>env]:1.031
+(15,) 1 (15000,) 114 0.910175298637
+[loop]114[time>store]:0.000
+[loop]114[time>train]:0.000
+[loop]115[time>start]:0.000
+[loop]115[time>env]:0.000
+[loop]115[time>env]:1.112
+(15,) 1 (15000,) 115 0.907915146621
+[loop]115[time>store]:0.000
+[loop]115[time>train]:0.000
+[loop]116[time>start]:0.000
+[loop]116[time>env]:0.000
+[loop]116[time>env]:1.041
+(15,) 1 (15000,) 116 0.909289261461
+[loop]116[time>store]:0.000
+[loop]116[time>train]:0.000
+[loop]117[time>start]:0.000
+[loop]117[time>env]:0.000
+[loop]117[time>env]:0.938
+(15,) 1 (15000,) 117 0.908971202594
+[loop]117[time>store]:0.000
+[loop]117[time>train]:0.000
+[loop]118[time>start]:0.000
+[loop]118[time>env]:0.000
+[loop]118[time>env]:1.014
+(15,) 1 (15000,) 118 0.906016689314
+[loop]118[time>store]:0.000
+[loop]118[time>train]:0.000
+[loop]119[time>start]:0.000
+[loop]119[time>env]:0.000
+[loop]119[time>env]:0.973
+(15,) 1 (15000,) 119 0.906206892294
+[loop]119[time>store]:0.000
+[loop]119[time>train]:0.000
+[loop]120[time>start]:0.000
+[loop]120[time>env]:0.000
+[loop]120[time>env]:1.055
+(15,) 1 (15000,) 120 0.903920434164
+[loop]120[time>store]:0.000
+[loop]120[time>train]:0.000
+[loop]121[time>start]:0.000
+[loop]121[time>env]:0.000
+[loop]121[time>env]:0.937
+(15,) 1 (15000,) 121 0.907151113954
+[loop]121[time>store]:0.000
+[loop]121[time>train]:0.000
+[loop]122[time>start]:0.000
+[loop]122[time>env]:0.000
+[loop]122[time>env]:1.081
+(15,) 1 (15000,) 122 0.902286047875
+[loop]122[time>store]:0.000
+[loop]122[time>train]:0.000
+[loop]123[time>start]:0.000
+[loop]123[time>env]:0.000
+[loop]123[time>env]:0.985
+(15,) 1 (15000,) 123 0.904048844106
+[loop]123[time>store]:0.000
+[loop]123[time>train]:0.000
+[loop]124[time>start]:0.000
+[loop]124[time>env]:0.000
+[loop]124[time>env]:1.042
+(15,) 1 (15000,) 124 0.903176531833
+[loop]124[time>store]:0.000
+[loop]124[time>train]:0.000
+[loop]125[time>start]:0.000
+[loop]125[time>env]:0.000
+[loop]125[time>env]:0.979
+(15,) 1 (15000,) 125 0.902992709015
+[loop]125[time>store]:0.000
+[loop]125[time>train]:0.000
+[loop]126[time>start]:0.000
+[loop]126[time>env]:0.000
+[loop]126[time>env]:0.911
+(15,) 1 (15000,) 126 0.903727160412
+[loop]126[time>store]:0.000
+[loop]126[time>train]:0.000
+[loop]127[time>start]:0.000
+[loop]127[time>env]:0.000
+[loop]127[time>env]:0.892
+(15,) 1 (15000,) 127 0.90317056494
+[loop]127[time>store]:0.000
+[loop]127[time>train]:0.000
+[loop]128[time>start]:0.000
+[loop]128[time>env]:0.000
+[loop]128[time>env]:0.816
+(15,) 1 (15000,) 128 0.904213869743
+[loop]128[time>store]:0.000
+[loop]128[time>train]:0.000
+[loop]129[time>start]:0.000
+[loop]129[time>env]:0.000
+[loop]129[time>env]:0.925
+(15,) 1 (15000,) 129 0.901056619468
+[loop]129[time>store]:0.000
+[loop]129[time>train]:0.000
+[loop]130[time>start]:0.000
+[loop]130[time>env]:0.000
+[loop]130[time>env]:0.903
+(15,) 1 (15000,) 130 0.901601341251
+[loop]130[time>store]:0.000
+[loop]130[time>train]:0.000
+[loop]131[time>start]:0.000
+[loop]131[time>env]:0.000
+[loop]131[time>env]:0.888
+(15,) 1 (15000,) 131 0.903515550976
+[loop]131[time>store]:0.000
+[loop]131[time>train]:0.000
+[loop]132[time>start]:0.000
+[loop]132[time>env]:0.000
+[loop]132[time>env]:0.846
+(15,) 1 (15000,) 132 0.903470525639
+[loop]132[time>store]:0.000
+[loop]132[time>train]:0.000
+[loop]133[time>start]:0.000
+[loop]133[time>env]:0.000
+[loop]133[time>env]:0.911
+(15,) 1 (15000,) 133 0.901849347485
+[loop]133[time>store]:0.000
+[loop]133[time>train]:0.000
+[loop]134[time>start]:0.000
+[loop]134[time>env]:0.000
+[loop]134[time>env]:0.895
+(15,) 1 (15000,) 134 0.902775283543
+[loop]134[time>store]:0.000
+[loop]134[time>train]:0.000
+[loop]135[time>start]:0.000
+[loop]135[time>env]:0.000
+[loop]135[time>env]:0.844
+(15,) 1 (15000,) 135 0.905831261089
+[loop]135[time>store]:0.000
+[loop]135[time>train]:0.000
+[loop]136[time>start]:0.000
+[loop]136[time>env]:0.000
+[loop]136[time>env]:0.776
+(15,) 1 (15000,) 136 0.90549286791
+[loop]136[time>store]:0.000
+[loop]136[time>train]:0.000
+[loop]137[time>start]:0.000
+[loop]137[time>env]:0.000
+[loop]137[time>env]:0.804
+(15,) 1 (15000,) 137 0.905811988294
+[loop]137[time>store]:0.000
+[loop]137[time>train]:0.000
+[loop]138[time>start]:0.000
+[loop]138[time>env]:0.000
+[loop]138[time>env]:0.806
+(15,) 1 (15000,) 138 0.906601152473
+[loop]138[time>store]:0.000
+[loop]138[time>train]:0.000
+[loop]139[time>start]:0.000
+[loop]139[time>env]:0.000
+[loop]139[time>env]:0.730
+(15,) 1 (15000,) 139 0.909219140341
+[loop]139[time>store]:0.000
+[loop]139[time>train]:0.000
+[loop]140[time>start]:0.000
+[loop]140[time>env]:0.000
+[loop]140[time>env]:0.744
+(15,) 1 (15000,) 140 0.909600684783
+[loop]140[time>store]:0.000
+[loop]140[time>train]:0.000
+[loop]141[time>start]:0.000
+[loop]141[time>env]:0.000
+[loop]141[time>env]:0.757
+(15,) 1 (15000,) 141 0.912877830397
+[loop]141[time>store]:0.000
+[loop]141[time>train]:0.000
+[loop]142[time>start]:0.000
+[loop]142[time>env]:0.000
+[loop]142[time>env]:0.748
+(15,) 1 (15000,) 142 0.913891299485
+[loop]142[time>store]:0.000
+[loop]142[time>train]:0.000
+[loop]143[time>start]:0.000
+[loop]143[time>env]:0.000
+[loop]143[time>env]:0.724
+(15,) 1 (15000,) 143 0.915528200054
+[loop]143[time>store]:0.000
+[loop]143[time>train]:0.000
+[loop]144[time>start]:0.000
+[loop]144[time>env]:0.000
+[loop]144[time>env]:0.729
+(15,) 1 (15000,) 144 0.917262840558
+[loop]144[time>store]:0.000
+[loop]144[time>train]:0.000
+[loop]145[time>start]:0.000
+[loop]145[time>env]:0.000
+[loop]145[time>env]:0.749
+(15,) 1 (15000,) 145 0.918157246706
+[loop]145[time>store]:0.000
+[loop]145[time>train]:0.000
+[loop]146[time>start]:0.000
+[loop]146[time>env]:0.000
+[loop]146[time>env]:0.756
+(15,) 1 (15000,) 146 0.920159206568
+[loop]146[time>store]:0.000
+[loop]146[time>train]:0.000
+[loop]147[time>start]:0.000
+[loop]147[time>env]:0.000
+[loop]147[time>env]:0.721
+(15,) 1 (15000,) 147 0.922271404337
+[loop]147[time>store]:0.000
+[loop]147[time>train]:0.000
+[loop]148[time>start]:0.000
+[loop]148[time>env]:0.000
+[loop]148[time>env]:0.688
+(15,) 1 (15000,) 148 0.924606962504
+[loop]148[time>store]:0.000
+[loop]148[time>train]:0.000
+[loop]149[time>start]:0.000
+[loop]149[time>env]:0.000
+[loop]149[time>env]:0.625
+(15,) 1 (15000,) 149 0.927544813506
+[loop]149[time>store]:0.000
+[loop]149[time>train]:0.000
+[loop]150[time>start]:0.000
+[loop]150[time>env]:0.000
+[loop]150[time>env]:0.621
+(15,) 1 (15000,) 150 0.930461019664
+[loop]150[time>store]:0.000
+[loop]150[time>train]:0.000
+[loop]151[time>start]:0.000
+[loop]151[time>env]:0.000
+[loop]151[time>env]:0.594
+(15,) 1 (15000,) 151 0.930900919656
+[loop]151[time>store]:0.000
+[loop]151[time>train]:0.000
+[loop]152[time>start]:0.000
+[loop]152[time>env]:0.000
+[loop]152[time>env]:0.621
+(15,) 1 (15000,) 152 0.934206042269
+[loop]152[time>store]:0.000
+[loop]152[time>train]:0.000
+[loop]153[time>start]:0.000
+[loop]153[time>env]:0.000
+[loop]153[time>env]:0.640
+(15,) 1 (15000,) 153 0.935702848165
+[loop]153[time>store]:0.000
+[loop]153[time>train]:0.000
+[loop]154[time>start]:0.000
+[loop]154[time>env]:0.000
+[loop]154[time>env]:0.625
+(15,) 1 (15000,) 154 0.93803440916
+[loop]154[time>store]:0.000
+[loop]154[time>train]:0.000
+[loop]155[time>start]:0.000
+[loop]155[time>env]:0.000
+[loop]155[time>env]:0.678
+(15,) 1 (15000,) 155 0.941210463605
+[loop]155[time>store]:0.000
+[loop]155[time>train]:0.000
+[loop]156[time>start]:0.000
+[loop]156[time>env]:0.000
+[loop]156[time>env]:0.643
+(15,) 1 (15000,) 156 0.944250873202
+[loop]156[time>store]:0.000
+[loop]156[time>train]:0.000
+[loop]157[time>start]:0.000
+[loop]157[time>env]:0.000
+[loop]157[time>env]:0.645
+(15,) 1 (15000,) 157 0.94673877587
+[loop]157[time>store]:0.000
+[loop]157[time>train]:0.000
+[loop]158[time>start]:0.000
+[loop]158[time>env]:0.000
+[loop]158[time>env]:0.633
+(15,) 1 (15000,) 158 0.949220901976
+[loop]158[time>store]:0.000
+[loop]158[time>train]:0.000
+[loop]159[time>start]:0.000
+[loop]159[time>env]:0.000
+[loop]159[time>env]:0.709
+(15,) 1 (15000,) 159 0.950780168767
+[loop]159[time>store]:0.000
+[loop]159[time>train]:0.000
+[loop]160[time>start]:0.000
+[loop]160[time>env]:0.000
+[loop]160[time>env]:0.689
+(15,) 1 (15000,) 160 0.953673277804
+[loop]160[time>store]:0.000
+[loop]160[time>train]:0.000
+[loop]161[time>start]:0.000
+[loop]161[time>env]:0.000
+[loop]161[time>env]:0.631
+(15,) 1 (15000,) 161 0.957318720825
+[loop]161[time>store]:0.000
+[loop]161[time>train]:0.000
+[loop]162[time>start]:0.000
+[loop]162[time>env]:0.000
+[loop]162[time>env]:0.593
+(15,) 1 (15000,) 162 0.959046935048
+[loop]162[time>store]:0.000
+[loop]162[time>train]:0.000
+[loop]163[time>start]:0.000
+[loop]163[time>env]:0.000
+[loop]163[time>env]:0.633
+(15,) 1 (15000,) 163 0.961955024661
+[loop]163[time>store]:0.000
+[loop]163[time>train]:0.000
+[loop]164[time>start]:0.000
+[loop]164[time>env]:0.000
+[loop]164[time>env]:0.673
+(15,) 1 (15000,) 164 0.963401977044
+[loop]164[time>store]:0.000
+[loop]164[time>train]:0.000
+[loop]165[time>start]:0.000
+[loop]165[time>env]:0.000
+[loop]165[time>env]:0.560
+(15,) 1 (15000,) 165 0.966986776601
+[loop]165[time>store]:0.000
+[loop]165[time>train]:0.000
+[loop]166[time>start]:0.000
+[loop]166[time>env]:0.000
+[loop]166[time>env]:0.656
+(15,) 1 (15000,) 166 0.967917651328
+[loop]166[time>store]:0.000
+[loop]166[time>train]:0.000
+[loop]167[time>start]:0.000
+[loop]167[time>env]:0.000
+[loop]167[time>env]:0.632
+(15,) 1 (15000,) 167 0.970163506395
+[loop]167[time>store]:0.000
+[loop]167[time>train]:0.000
+[loop]168[time>start]:0.000
+[loop]168[time>env]:0.000
+[loop]168[time>env]:0.612
+(15,) 1 (15000,) 168 0.971200423659
+[loop]168[time>store]:0.000
+[loop]168[time>train]:0.000
+[loop]169[time>start]:0.000
+[loop]169[time>env]:0.000
+[loop]169[time>env]:0.683
+(15,) 1 (15000,) 169 0.9735366766
+[loop]169[time>store]:0.000
+[loop]169[time>train]:0.000
+[loop]170[time>start]:0.000
+[loop]170[time>env]:0.000
+[loop]170[time>env]:0.660
+(15,) 1 (15000,) 170 0.975416384962
+[loop]170[time>store]:0.000
+[loop]170[time>train]:0.000
+[loop]171[time>start]:0.000
+[loop]171[time>env]:0.000
+[loop]171[time>env]:0.614
+(15,) 1 (15000,) 171 0.976874822455
+[loop]171[time>store]:0.000
+[loop]171[time>train]:0.000
+[loop]172[time>start]:0.000
+[loop]172[time>env]:0.000
+[loop]172[time>env]:0.690
+(15,) 1 (15000,) 172 0.978715490934
+[loop]172[time>store]:0.000
+[loop]172[time>train]:0.000
+[loop]173[time>start]:0.000
+[loop]173[time>env]:0.000
+[loop]173[time>env]:0.659
+(15,) 1 (15000,) 173 0.981348927774
+[loop]173[time>store]:0.000
+[loop]173[time>train]:0.000
+[loop]174[time>start]:0.000
+[loop]174[time>env]:0.000
+[loop]174[time>env]:0.659
+(15,) 1 (15000,) 174 0.982656619045
+[loop]174[time>store]:0.000
+[loop]174[time>train]:0.000
+[loop]175[time>start]:0.000
+[loop]175[time>env]:0.000
+[loop]175[time>env]:0.667
+(15,) 1 (15000,) 175 0.983994131038
+[loop]175[time>store]:0.000
+[loop]175[time>train]:0.000
+[loop]176[time>start]:0.000
+[loop]176[time>env]:0.000
+[loop]176[time>env]:0.676
+(15,) 1 (15000,) 176 0.985933917634
+[loop]176[time>store]:0.000
+[loop]176[time>train]:0.000
+[loop]177[time>start]:0.000
+[loop]177[time>env]:0.000
+[loop]177[time>env]:0.647
+(15,) 1 (15000,) 177 0.987338403465
+[loop]177[time>store]:0.000
+[loop]177[time>train]:0.000
+[loop]178[time>start]:0.000
+[loop]178[time>env]:0.000
+[loop]178[time>env]:0.680
+(15,) 1 (15000,) 178 0.988184375406
+[loop]178[time>store]:0.000
+[loop]178[time>train]:0.000
+[loop]179[time>start]:0.000
+[loop]179[time>env]:0.000
+[loop]179[time>env]:0.572
+(15,) 1 (15000,) 179 0.990708044914
+[loop]179[time>store]:0.000
+[loop]179[time>train]:0.000
+[loop]180[time>start]:0.000
+[loop]180[time>env]:0.000
+[loop]180[time>env]:0.665
+(15,) 1 (15000,) 180 0.991797069681
+[loop]180[time>store]:0.000
+[loop]180[time>train]:0.000
+[loop]181[time>start]:0.000
+[loop]181[time>env]:0.000
+[loop]181[time>env]:0.684
+(15,) 1 (15000,) 181 0.992682544924
+[loop]181[time>store]:0.000
+[loop]181[time>train]:0.000
+[loop]182[time>start]:0.000
+[loop]182[time>env]:0.000
+[loop]182[time>env]:0.571
+(15,) 1 (15000,) 182 0.994997482122
+[loop]182[time>store]:0.000
+[loop]182[time>train]:0.000
+[loop]183[time>start]:0.000
+[loop]183[time>env]:0.000
+[loop]183[time>env]:0.698
+(15,) 1 (15000,) 183 0.99526190912
+[loop]183[time>store]:0.000
+[loop]183[time>train]:0.000
+[loop]184[time>start]:0.000
+[loop]184[time>env]:0.000
+[loop]184[time>env]:0.701
+(15,) 1 (15000,) 184 0.996657062984
+[loop]184[time>store]:0.000
+[loop]184[time>train]:0.000
+[loop]185[time>start]:0.000
+[loop]185[time>env]:0.000
+[loop]185[time>env]:0.618
+(15,) 1 (15000,) 185 0.999264450219
+[loop]185[time>store]:0.000
+[loop]185[time>train]:0.000
+[loop]186[time>start]:0.000
+[loop]186[time>env]:0.000
+[loop]186[time>env]:0.617
+(15,) 1 (15000,) 186 0.99835988385
+[loop]186[time>store]:0.000
+[loop]186[time>train]:0.000
+[loop]187[time>start]:0.000
+[loop]187[time>env]:0.000
+[loop]187[time>env]:0.651
+(15,) 1 (15000,) 187 1.00018497417
+[loop]187[time>store]:0.000
+[loop]187[time>train]:0.000
+[loop]188[time>start]:0.000
+[loop]188[time>env]:0.000
+[loop]188[time>env]:0.693
+(15,) 1 (15000,) 188 1.00049613555
+[loop]188[time>store]:0.000
+[loop]188[time>train]:0.000
+[loop]189[time>start]:0.000
+[loop]189[time>env]:0.000
+[loop]189[time>env]:0.592
+(15,) 1 (15000,) 189 1.00266010796
+[loop]189[time>store]:0.000
+[loop]189[time>train]:0.000
+[loop]190[time>start]:0.000
+[loop]190[time>env]:0.000
+[loop]190[time>env]:0.738
+(15,) 1 (15000,) 190 1.00194038069
+[loop]190[time>store]:0.000
+[loop]190[time>train]:0.000
+[loop]191[time>start]:0.000
+[loop]191[time>env]:0.000
+[loop]191[time>env]:0.753
+(15,) 1 (15000,) 191 1.00167432574
+[loop]191[time>store]:0.000
+[loop]191[time>train]:0.000
+[loop]192[time>start]:0.000
+[loop]192[time>env]:0.000
+[loop]192[time>env]:0.657
+(15,) 1 (15000,) 192 1.0047658566
+[loop]192[time>store]:0.000
+[loop]192[time>train]:0.000
+[loop]193[time>start]:0.000
+[loop]193[time>env]:0.000
+[loop]193[time>env]:0.683
+(15,) 1 (15000,) 193 1.00459803596
+[loop]193[time>store]:0.000
+[loop]193[time>train]:0.000
+[loop]194[time>start]:0.000
+[loop]194[time>env]:0.000
+[loop]194[time>env]:0.645
+(15,) 1 (15000,) 194 1.00469188884
+[loop]194[time>store]:0.000
+[loop]194[time>train]:0.000
+[loop]195[time>start]:0.000
+[loop]195[time>env]:0.000
+[loop]195[time>env]:0.679
+(15,) 1 (15000,) 195 1.00579903692
+[loop]195[time>store]:0.000
+[loop]195[time>train]:0.000
+[loop]196[time>start]:0.000
+[loop]196[time>env]:0.000
+[loop]196[time>env]:0.742
+(15,) 1 (15000,) 196 1.00472049005
+[loop]196[time>store]:0.000
+[loop]196[time>train]:0.000
+[loop]197[time>start]:0.000
+[loop]197[time>env]:0.000
+[loop]197[time>env]:0.779
+(15,) 1 (15000,) 197 1.00486818815
+[loop]197[time>store]:0.000
+[loop]197[time>train]:0.000
+[loop]198[time>start]:0.000
+[loop]198[time>env]:0.000
+[loop]198[time>env]:0.769
+(15,) 1 (15000,) 198 1.00647110514
+[loop]198[time>store]:0.000
+[loop]198[time>train]:0.000
+[loop]199[time>start]:0.000
+[loop]199[time>env]:0.000
+[loop]199[time>env]:0.749
+(15,) 1 (15000,) 199 1.00684981952
+[loop]199[time>store]:0.000
+[loop]199[time>train]:0.000
+[loop]200[time>start]:0.000
+[loop]200[time>env]:0.000
+[loop]200[time>env]:0.790
+(15,) 1 (15000,) 200 1.00594876064
+[loop]200[time>store]:0.000
+[loop]200[time>train]:0.000
+[loop]201[time>start]:0.000
+[loop]201[time>env]:0.000
+[loop]201[time>env]:0.724
+(15,) 1 (15000,) 201 1.00730891767
+[loop]201[time>store]:0.000
+[loop]201[time>train]:0.000
+[loop]202[time>start]:0.000
+[loop]202[time>env]:0.000
+[loop]202[time>env]:0.789
+(15,) 1 (15000,) 202 1.00565172257
+[loop]202[time>store]:0.000
+[loop]202[time>train]:0.000
+[loop]203[time>start]:0.000
+[loop]203[time>env]:0.000
+[loop]203[time>env]:0.769
+(15,) 1 (15000,) 203 1.00630350076
+[loop]203[time>store]:0.000
+[loop]203[time>train]:0.000
+[loop]204[time>start]:0.000
+[loop]204[time>env]:0.000
+[loop]204[time>env]:0.736
+(15,) 1 (15000,) 204 1.00728301221
+[loop]204[time>store]:0.000
+[loop]204[time>train]:0.000
+[loop]205[time>start]:0.000
+[loop]205[time>env]:0.000
+[loop]205[time>env]:0.745
+(15,) 1 (15000,) 205 1.00673298522
+[loop]205[time>store]:0.000
+[loop]205[time>train]:0.000
+[loop]206[time>start]:0.000
+[loop]206[time>env]:0.000
+[loop]206[time>env]:0.851
+(15,) 1 (15000,) 206 1.00464225202
+[loop]206[time>store]:0.000
+[loop]206[time>train]:0.000
+[loop]207[time>start]:0.000
+[loop]207[time>env]:0.000
+[loop]207[time>env]:0.774
+(15,) 1 (15000,) 207 1.00654449183
+[loop]207[time>store]:0.000
+[loop]207[time>train]:0.000
+[loop]208[time>start]:0.000
+[loop]208[time>env]:0.000
+[loop]208[time>env]:0.751
+(15,) 1 (15000,) 208 1.00691945266
+[loop]208[time>store]:0.000
+[loop]208[time>train]:0.000
+[loop]209[time>start]:0.000
+[loop]209[time>env]:0.000
+[loop]209[time>env]:0.822
+(15,) 1 (15000,) 209 1.00480456616
+[loop]209[time>store]:0.000
+[loop]209[time>train]:0.000
+[loop]210[time>start]:0.000
+[loop]210[time>env]:0.000
+[loop]210[time>env]:0.773
+(15,) 1 (15000,) 210 1.00416081868
+[loop]210[time>store]:0.000
+[loop]210[time>train]:0.000
+[loop]211[time>start]:0.000
+[loop]211[time>env]:0.000
+[loop]211[time>env]:0.765
+(15,) 1 (15000,) 211 1.00388275033
+[loop]211[time>store]:0.000
+[loop]211[time>train]:0.000
+[loop]212[time>start]:0.000
+[loop]212[time>env]:0.000
+[loop]212[time>env]:0.773
+(15,) 1 (15000,) 212 1.00345018189
+[loop]212[time>store]:0.000
+[loop]212[time>train]:0.000
+[loop]213[time>start]:0.000
+[loop]213[time>env]:0.000
+[loop]213[time>env]:0.769
+(15,) 1 (15000,) 213 1.0039160531
+[loop]213[time>store]:0.000
+[loop]213[time>train]:0.000
+[loop]214[time>start]:0.000
+[loop]214[time>env]:0.000
+[loop]214[time>env]:0.795
+(15,) 1 (15000,) 214 1.00205560242
+[loop]214[time>store]:0.000
+[loop]214[time>train]:0.000
+[loop]215[time>start]:0.000
+[loop]215[time>env]:0.000
+[loop]215[time>env]:0.743
+(15,) 1 (15000,) 215 1.00330764239
+[loop]215[time>store]:0.000
+[loop]215[time>train]:0.000
+[loop]216[time>start]:0.000
+[loop]216[time>env]:0.000
+[loop]216[time>env]:0.816
+(15,) 1 (15000,) 216 1.00196082044
+[loop]216[time>store]:0.000
+[loop]216[time>train]:0.000
+[loop]217[time>start]:0.000
+[loop]217[time>env]:0.000
+[loop]217[time>env]:0.793
+(15,) 1 (15000,) 217 1.00180062573
+[loop]217[time>store]:0.000
+[loop]217[time>train]:0.000
+[loop]218[time>start]:0.000
+[loop]218[time>env]:0.000
+[loop]218[time>env]:0.728
+(15,) 1 (15000,) 218 1.00216846269
+[loop]218[time>store]:0.000
+[loop]218[time>train]:0.000
+[loop]219[time>start]:0.000
+[loop]219[time>env]:0.000
+[loop]219[time>env]:0.769
+(15,) 1 (15000,) 219 0.999325696668
+[loop]219[time>store]:0.000
+[loop]219[time>train]:0.000
+[loop]220[time>start]:0.000
+[loop]220[time>env]:0.000
+[loop]220[time>env]:0.781
+(15,) 1 (15000,) 220 0.999135067172
+[loop]220[time>store]:0.000
+[loop]220[time>train]:0.000
+[loop]221[time>start]:0.000
+[loop]221[time>env]:0.000
+[loop]221[time>env]:0.798
+(15,) 1 (15000,) 221 0.996626200363
+[loop]221[time>store]:0.000
+[loop]221[time>train]:0.000
+[loop]222[time>start]:0.000
+[loop]222[time>env]:0.000
+[loop]222[time>env]:0.808
+(15,) 1 (15000,) 222 0.995884783618
+[loop]222[time>store]:0.000
+[loop]222[time>train]:0.000
+[loop]223[time>start]:0.000
+[loop]223[time>env]:0.000
+[loop]223[time>env]:0.730
+(15,) 1 (15000,) 223 0.997088766665
+[loop]223[time>store]:0.000
+[loop]223[time>train]:0.000
+[loop]224[time>start]:0.000
+[loop]224[time>env]:0.000
+[loop]224[time>env]:0.790
+(15,) 1 (15000,) 224 0.994648611537
+[loop]224[time>store]:0.000
+[loop]224[time>train]:0.000
+[loop]225[time>start]:0.000
+[loop]225[time>env]:0.000
+[loop]225[time>env]:0.809
+(15,) 1 (15000,) 225 0.993638710848
+[loop]225[time>store]:0.000
+[loop]225[time>train]:0.000
+[loop]226[time>start]:0.000
+[loop]226[time>env]:0.000
+[loop]226[time>env]:0.821
+(15,) 1 (15000,) 226 0.992948045455
+[loop]226[time>store]:0.000
+[loop]226[time>train]:0.000
+[loop]227[time>start]:0.000
+[loop]227[time>env]:0.000
+[loop]227[time>env]:0.842
+(15,) 1 (15000,) 227 0.991668850251
+[loop]227[time>store]:0.000
+[loop]227[time>train]:0.000
+[loop]228[time>start]:0.000
+[loop]228[time>env]:0.000
+[loop]228[time>env]:0.816
+(15,) 1 (15000,) 228 0.990526267411
+[loop]228[time>store]:0.000
+[loop]228[time>train]:0.000
+[loop]229[time>start]:0.000
+[loop]229[time>env]:0.000
+[loop]229[time>env]:0.825
+(15,) 1 (15000,) 229 0.991018933272
+[loop]229[time>store]:0.000
+[loop]229[time>train]:0.000
+[loop]230[time>start]:0.000
+[loop]230[time>env]:0.000
+[loop]230[time>env]:0.830
+(15,) 1 (15000,) 230 0.990099561385
+[loop]230[time>store]:0.000
+[loop]230[time>train]:0.000
+[loop]231[time>start]:0.000
+[loop]231[time>env]:0.000
+[loop]231[time>env]:0.902
+(15,) 1 (15000,) 231 0.985527693818
+[loop]231[time>store]:0.000
+[loop]231[time>train]:0.000
+[loop]232[time>start]:0.000
+[loop]232[time>env]:0.000
+[loop]232[time>env]:0.828
+(15,) 1 (15000,) 232 0.987329048213
+[loop]232[time>store]:0.000
+[loop]232[time>train]:0.000
+[loop]233[time>start]:0.000
+[loop]233[time>env]:0.000
+[loop]233[time>env]:0.850
+(15,) 1 (15000,) 233 0.985097023617
+[loop]233[time>store]:0.000
+[loop]233[time>train]:0.000
+[loop]234[time>start]:0.000
+[loop]234[time>env]:0.000
+[loop]234[time>env]:0.847
+(15,) 1 (15000,) 234 0.984019662661
+[loop]234[time>store]:0.000
+[loop]234[time>train]:0.000
+[loop]235[time>start]:0.000
+[loop]235[time>env]:0.000
+[loop]235[time>env]:0.859
+(15,) 1 (15000,) 235 0.981805782362
+[loop]235[time>store]:0.000
+[loop]235[time>train]:0.000
+[loop]236[time>start]:0.000
+[loop]236[time>env]:0.000
+[loop]236[time>env]:0.775
+(15,) 1 (15000,) 236 0.982073708715
+[loop]236[time>store]:0.000
+[loop]236[time>train]:0.000
+[loop]237[time>start]:0.000
+[loop]237[time>env]:0.000
+[loop]237[time>env]:0.845
+(15,) 1 (15000,) 237 0.97904439592
+[loop]237[time>store]:0.000
+[loop]237[time>train]:0.000
+[loop]238[time>start]:0.000
+[loop]238[time>env]:0.000
+[loop]238[time>env]:0.785
+(15,) 1 (15000,) 238 0.978725444835
+[loop]238[time>store]:0.000
+[loop]238[time>train]:0.000
