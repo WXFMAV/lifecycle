@@ -3,6 +3,7 @@
 To launch the simulation, run the command as follows
 
 ```
+cd lifecycle
 bash run.bash
 ```
 
